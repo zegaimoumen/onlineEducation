@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+  --green: #00e77f;
+  --white: #fff;
+  --light-white: #aaa;
+  --black: #3d3d3d;
+  --light-bg: #4b4b4b;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background-color: var(--white);
+  color: var(--black);
+}
+body {
+  background-color: var(--black);
+}
+p,
+span,
+small {
+  color: var(--light-white);
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
+}
+.nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: var(--green);
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--green);
+  transition: 0.8s;
+}
+.navbar-expand-lg .navbar-collapse {
+  flex-direction: row-reverse;
+}
+/* Home */
+.centerPosition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-text {
+  font-size: 5em;
+}
+.home-button {
+  margin-top: 0.5em;
+  padding: 0.25em 0.9em;
+  font-size: 1.5em;
+  border-radius: 5em;
+}
+.home-bottom {
+  background-color: var(--light-bg);
+}
+.home-icons {
+  padding: 1em;
+  margin: auto;
+}
+
+.fa-3x {
+  font-size: 4em;
+}
+
+.color-web {
+  color: var(--green);
+}
+.home-icon-text span {
+  display: block;
+  color: var(--white);
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+.home-icon-text small {
+  color: var(--light-white);
+}
+
+/* About */
+.py-9 {
+  margin-top: 5em;
+}
+.About-right,
+.contact-right {
+  display: flex;
+  align-items: center;
+}
+.About-text {
+  width: 100%;
+}
+/* Courses */
+.Coureses h2 {
+  margin-bottom: 1em;
+}
+.courses-item {
+  background-color: var(--light-bg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.courses-item-img {
+  height: 20rem;
+  padding: 1em 0;
+  margin: 1em 0;
+}
+.courses-item-img img {
+  width: 100%;
+}
+.courses-item-text {
+  padding: 1em 0;
+  margin: 1em 0;
+  width: 80%;
+  margin: auto;
+}
+.courses-item-text h4 {
+  color: var(--white);
+  font-size: 1em;
+}
+.courses-item-text p small {
+  font-size: 0.8em;
+}
+
+.donts {
+  margin: 1em auto;
+  text-align: center;
+}
+.swiper-pagination {
+  position: static;
+}
+.donts span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 0.3em;
+  background-color: var(--light-bg);
+  border-radius: 50%;
+  transition: 0.8s;
+  opacity: 1;
+}
+.donts .swiper-pagination-bullet-active,
+.donts span:hover {
+  background-color: var(--green);
+  transition: 0.8s;
+}
+
+/* Expert tutors */
+.teacher-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  height: 40em;
+}
+
+.teacher-img {
+  margin: 1em 0;
+}
+.teacher-item img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+  backface-visibility: hidden;
+}
+
+.tutors-icons {
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 1em;
+  left: 2em;
+}
+.tutors-icons a {
+  text-decoration: none;
+  color: var(--black);
+}
+.tutors-icons i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 1em;
+  text-align: center;
+  line-height: 30px;
+  background-color: var(--white);
+  border: none;
+  border-radius: 2px;
+}
+
+.teacher-item:hover .tutors-icons {
+  opacity: 1;
+}
+.teacher-item:hover .teacher-img {
+  opacity: 0.6;
+}
+/* Contact */
+.contact-form {
+  width: 100%;
+}
+.contact-form > input,
+.contact-form select {
+  width: 90%;
+  background-color: var(--light-bg);
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  margin-bottom: 1em;
+}
+.contact-form .selaction input {
+  appearance: none;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  margin: 1em 0.5em;
+  background-color: var(--light-white);
+  border-radius: 2px;
+}
+.contact-form .selaction input #Mane:checked ~ span[for="Mane"] {
+  color: var(--green);
+}
+.contact-form .selaction input:checked {
+  background-color: var(--green);
+  border-radius: 10em;
+}
+
+.contact-form .selaction span {
+  color: var(--white);
+  cursor: pointer;
+}
+.contact-form select {
+  color: var(--white);
+}
+.contact-form .submit {
+  width: 30%;
+  color: var(--white);
+}
+/* Footer */
+.footer {
+  background-color: var(--light-bg);
+  padding: 1em 0;
+}
+.footer .footer-icons {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  background-color: black;
+  color: var(--light-white);
+  margin-bottom: 1em;
+  transition: 0.8s;
+}
+.footer .footer-icons:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+.footer .line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-white);
+  margin-bottom: 1em;
+}
+.footer p {
+  color: var(--light-white);
+}
+.footer p span {
+  color: var(--green);
+}
